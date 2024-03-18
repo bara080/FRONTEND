@@ -1,0 +1,121 @@
+/* import roboto styles from google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* static whole body style */
+*
+{
+    box-sizing : border-box;
+}
+
+/* body style */
+
+body {
+    background-color: rgba(35, 24, 128, 0.826);
+    font-family  : "Roboto" , sans-serif;
+    margin : 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content : center;
+    height : 100vh;
+    overflow : none;
+    color: white;
+}
+
+.container
+{
+    background-color: rgb(0,0,0,0.4);
+    padding: 20px  40px;
+    border-radius: 5px;
+
+}
+
+.container  h1
+{
+    text-align : center ;
+    margin-bottom: 30px;
+}
+
+.container a {
+    text-decoration : none;
+}
+
+.btn
+{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background-color:lightblue ;
+    padding: 15px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 6px;
+    font-family: inherit;
+
+}
+
+.btn:focus 
+{
+    outline : 0;
+}
+
+.btn:active
+{
+    transform: scale(0.9);
+}
+
+.text
+{
+    margin-top: 30px;
+}
+
+
+.from-control
+{
+    position : relative;
+    margin : 2px 0 40px;
+    width : 300px;
+
+}
+
+.from-control input
+{
+    background-color: transparent;
+    border : 0;
+    border-bottom: 2px white solid;
+    display : block;
+    width: 100%;
+    padding : 15px 0;
+    font-size : 18px;
+    color : white;
+
+}
+
+.form-control  input:focus,
+.form-control input:valid
+{
+    outline-style: none;
+    border-bottom-color :lightblue;
+}
+
+.form-control label{
+    position : absolute;
+    top: 15px;
+    left : 0;
+}
+
+.form-control label span
+{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition:0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span
+{
+    color: lightblue;
+    transform:translateY(-30px);
+}
